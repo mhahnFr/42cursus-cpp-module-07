@@ -16,4 +16,6 @@ int main() {
             ":D"
     };
     iter(strs, 5, iterFunc<std::string>);
+	char cArr[5] = { 'q', 'w', 'e', 'r', 't' };
+	iter(cArr, 5, ( void(*)(char))toupper);
 }

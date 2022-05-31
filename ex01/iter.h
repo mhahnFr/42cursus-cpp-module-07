@@ -17,8 +17,12 @@ void iterFunc(T t) {
 
 template<typename T>
 void iter(T * array, unsigned long size, void iterFunc(T)) {
-    for (unsigned long i = 0; i < size; ++i) {
-        iterFunc(array[i]);
+    if (array == 0L) return;
+
+    if (iterFunc != 0L) {
+        for (unsigned long i = 0; i < size; ++i) {
+            iterFunc(array[i]);
+        }
     }
 }
 
