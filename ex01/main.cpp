@@ -6,7 +6,7 @@
 
 int main() {
     int iArr[5] = {5, 4, 3, 2, 1};
-    iter(iArr, 5, iterFunc);
+    iter(iArr, 5, iterFunc<int>);
 
     std::string strs[5] = {
             "Hello",
@@ -15,5 +15,5 @@ int main() {
             "!",
             ":D"
     };
-    iter(strs, 5, iterFunc);
+    iter(strs, 5, iterFunc<std::string>);
 }
